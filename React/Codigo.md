@@ -70,86 +70,86 @@ import { useState } from "react"
     }
 
 # FUNCIONALIDAD LISTAS
-const Items = () => {
-return(
-<li>{nombre} {visto && '✅'}</li> // forma 1
-<li>{nombre} {visto ? '✅' : '⛔'}</li> // forma 2
-)
-}
-
-export const ListadoApp = () => {
-  return(
-  <>
-    <h1>Listado de Temas del Curso</h1>
-    <ul>
-      <Items id: 1, nombre="Irina" visto={true}></Items>
-      <Items id: 2, nombre="Marcos" visto={true}></Items>
-      <Items id: 3, nombre="Daniel" visto={true}></Items>
-      <Items id: 4, nombre="Cristina" visto={false}></Items>
-      <Items id: 5, nombre="Sara" visto={false}></Items>
-    </ul>
-  </>
-  )
-}
+    const Items = () => {
+    return(
+    <li>{nombre} {visto && '✅'}</li> // forma 1
+    <li>{nombre} {visto ? '✅' : '⛔'}</li> // forma 2
+    )
+    }
+    
+    export const ListadoApp = () => {
+      return(
+      <>
+        <h1>Listado de Temas del Curso</h1>
+        <ul>
+          <Items id: 1, nombre="Irina" visto={true}></Items>
+          <Items id: 2, nombre="Marcos" visto={true}></Items>
+          <Items id: 3, nombre="Daniel" visto={true}></Items>
+          <Items id: 4, nombre="Cristina" visto={false}></Items>
+          <Items id: 5, nombre="Sara" visto={false}></Items>
+        </ul>
+      </>
+      )
+    }
 
 # MAP y HERENCIA
-export const ListadoApp = () => {
-const addTask = () => {
-setArreglo([...arreglo, {nombre:'nuevo', visto:false}])
-}
-let listadoSecciones = [{nombre: 'Irina' visto: true},
-      {nombre: 'Marcos' visto: true},
-{nombre: 'Daniel' visto: true},
-{nombre: 'Cristina' visto: true},
-{nombre: 'Sara' visto: true},
-]
-const [arreglo, setArreglo] = useState([listadoSecciones])
-const onAgregarTarea = (val) => {
-let valor = val.trim()
-if(val < 1) return // si el valor en menor a 1 caracter se sale de la funcion
-const envio = {
-id = arreglo.length + 1, // si el id empieza desde 0 no hacer la suma
-nombre: valor,
-visto: false
-}
-setArreglo{...Arreglo, envio}
-}
-  return(
-  <>
-    <h1>Listado de Temas del Curso</h1>
-    <AgregarTarea agregarTarea=(onAgregarTarea)></AgregarTarea>
-    <ul>
-      {arreglo.map(item => <Item key={item.id} nombre={item.nombre} visto={item.visto}></Item>)}
-    </ul>
-<button onClick={() => addTask()}>Agregar Tarea</button>
-  </>
-  )
-}
+    export const ListadoApp = () => {
+    const addTask = () => {
+    setArreglo([...arreglo, {nombre:'nuevo', visto:false}])
+    }
+    let listadoSecciones = [{nombre: 'Irina' visto: true},
+          {nombre: 'Marcos' visto: true},
+    {nombre: 'Daniel' visto: true},
+    {nombre: 'Cristina' visto: true},
+    {nombre: 'Sara' visto: true},
+    ]
+    const [arreglo, setArreglo] = useState([listadoSecciones])
+    const onAgregarTarea = (val) => {
+    let valor = val.trim()
+    if(val < 1) return // si el valor en menor a 1 caracter se sale de la funcion
+    const envio = {
+    id = arreglo.length + 1, // si el id empieza desde 0 no hacer la suma
+    nombre: valor,
+    visto: false
+    }
+    setArreglo{...Arreglo, envio}
+    }
+      return(
+      <>
+        <h1>Listado de Temas del Curso</h1>
+        <AgregarTarea agregarTarea=(onAgregarTarea)></AgregarTarea>
+        <ul>
+          {arreglo.map(item => <Item key={item.id} nombre={item.nombre} visto={item.visto}></Item>)}
+        </ul>
+    <button onClick={() => addTask()}>Agregar Tarea</button>
+      </>
+      )
+    }
 
 # CLASES JSX
 En HTML el atributo CLASS para enlazar con CSS, en REACT se cambia por className
 
 # FORMULARIO RELACION CON LA APLICACION ANTERIOR
-        import { useState } from "react"
-        export const AgregarTarea = (agregarTarea) => {
-        (short code useState)const [unputValue, setInputValue] = useState('')
-        const onInputChange =(event) => {
-        setInputValue(evento.target.value)
-        }
-        const onSubmit = (event) =>{
-        event.preventDefault()
-        agregarTarea{inputValue}
-        agregarTarea{tareas => [...tareas, envio]}
-        }
-        return(
-        <form onSubmit={onSubmit}>
-        <input type="text" placeholder="Ingresa Tarea" value={} onChange={onInputChange}
-        </form>
-        />
-        )
-        }
+    import { useState } from "react"
+    export const AgregarTarea = (agregarTarea) => {
+    (short code useState)const [unputValue, setInputValue] = useState('')
+    const onInputChange =(event) => {
+    setInputValue(evento.target.value)
+    }
+    const onSubmit = (event) =>{
+    event.preventDefault()
+    agregarTarea{inputValue}
+    agregarTarea{tareas => [...tareas, envio]}
+    }
+    return(
+    <form onSubmit={onSubmit}>
+    <input type="text" placeholder="Ingresa Tarea" value={} onChange={onInputChange}
+    </form>
+    />
+    )
+    }
 
-CUSTOM(organizacion de codigo) HOOK(use...)
+# CUSTOM(organizacion de codigo) HOOK(use...)
 USEEFFECT(al hacer algo en el componente se ejecute una vez) Y FECTH
 MAIN.jsx
 import React from 'react'

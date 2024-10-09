@@ -1,25 +1,25 @@
-COMPONENTES
+# COMPONENTES
 En las apliaciones de react nos dara una serie de comandos cortos para crear nuestros codigos mas facil
 Para la creacion de componentes utilizaremos ffc(crea una funcion donde ejecutaremos la logica)
 
-VARIABLES
+# VARIABLES
 Todas las variables ingresadas dentro de {} puede ser imprimida en pantalla, menos los de tipo objeto
 Los valores numericos en las propiedades definidas en el main se colocan entre {}
 
-JERARQUIA DENTRO DE LAS FUNCIONES
+# JERARQUIA DENTRO DE LAS FUNCIONES
 El codigo tiene que tener un padre para ser ejecutado, que en este caso sera el div root del HTML.
 Para que esto funcione debemos integrar el codigo a ejecutar dentro de un elemento que pueden ser 3 formas distintas:
   1º Una etiqueta vacia <></> !la mas usada y actual
   2º import {Fragment} from "react" <Fragment></Fragment>
   3º Una cadena de cajas dentro de otras <div></div>(en deshuso)
 
-IMPORTACION DE ARCHIVOS 
+# IMPORTACION DE ARCHIVOS 
 0º !Importante. los importe se colocan al inicio del archivo, despues las variables y por ultimo los componentes
 1º Creamos nuestro archivo
 2º En el archivo main importamos los archivos si queremos que afecte a toda la pagina. import './style.css'
 3º Si queremos que solo afecte a un solo componente apliaramos el import en archivo correspondiente
 
-PROPIEDADES
+# PROPIEDADES
 En las funciones se pueden incializar propiedades definidas en el main que estaran en los parentesis.
 Una vez disponibles estas propiedades podemos imprimirlas en nuestra pagina dentro del componente <></>
 
@@ -37,7 +37,7 @@ subtitulo: "Seccion"
 }
 Otra forma de poner un valor por defecto es aplicandolo directamente en las propiedades de la funcionComponente
 
-EVENTOS
+# EVENTOS
 Tiene los mimos eventos que en JavaScript
 Ejemplo de funcion con un solo argumento: 
   function NombreFunction(event){console.log(event)}
@@ -46,30 +46,30 @@ Ejemplo de funcion don mas de un argumento
   function NombreFunction(event, arg){console.log(event) console.log(arg)}
   <button Onclik={ (event) => NombreFunction(event, 'otro argumento')}>Soy un boton</button>
 
-ESTADOS
+# ESTADOS
 Llamar a la clase useState
 import { useState } from "react"
 
-FUNCIONALIDAD CONTADOR
-MAIN
-  <ContadorApp value={1}/>
+# FUNCIONALIDAD CONTADOR
+    MAIN
+      <ContadorApp value={1}/>
+    
+    import { useState } from "react"
+    export const ContadorApp = ({ value }) => {
+    const [contador, setContador] = useState (value)
+    const handleClick = ()  => {
+      setContador{contador + 1}
+    }
+    return (
+      <>
+        <h1>Contador: </h1>
+        <p>{contador}</p>
+        <button onClick={handleClick}> soy un boton</button>
+      </>
+      )
+    }
 
-import { useState } from "react"
-export const ContadorApp = ({ value }) => {
-const [contador, setContador] = useState (value)
-const handleClick = ()  => {
-  setContador{contador + 1}
-}
-return (
-  <>
-    <h1>Contador: </h1>
-    <p>{contador}</p>
-    <button onClick={handleClick}> soy un boton</button>
-  </>
-  )
-}
-
-FUNCIONALIDAD LISTAS
+# FUNCIONALIDAD LISTAS
 const Items = () => {
 return(
 <li>{nombre} {visto && '✅'}</li> // forma 1
@@ -92,7 +92,7 @@ export const ListadoApp = () => {
   )
 }
 
-MAP y HERENCIA
+# MAP y HERENCIA
 export const ListadoApp = () => {
 const addTask = () => {
 setArreglo([...arreglo, {nombre:'nuevo', visto:false}])
@@ -126,29 +126,28 @@ setArreglo{...Arreglo, envio}
   )
 }
 
-CLASES JSX
+# CLASES JSX
 En HTML el atributo CLASS para enlazar con CSS, en REACT se cambia por className
 
-FORMULARIO RELACION CON LA APLICACION ANTERIOR
-
-import { useState } from "react"
-export const AgregarTarea = (agregarTarea) => {
-(short code useState)const [unputValue, setInputValue] = useState('')
-const onInputChange =(event) => {
-setInputValue(evento.target.value)
-}
-const onSubmit = (event) =>{
-event.preventDefault()
-agregarTarea{inputValue}
-agregarTarea{tareas => [...tareas, envio]}
-}
-return(
-<form onSubmit={onSubmit}>
-<input type="text" placeholder="Ingresa Tarea" value={} onChange={onInputChange}
-</form>
-/>
-)
-}
+# FORMULARIO RELACION CON LA APLICACION ANTERIOR
+        import { useState } from "react"
+        export const AgregarTarea = (agregarTarea) => {
+        (short code useState)const [unputValue, setInputValue] = useState('')
+        const onInputChange =(event) => {
+        setInputValue(evento.target.value)
+        }
+        const onSubmit = (event) =>{
+        event.preventDefault()
+        agregarTarea{inputValue}
+        agregarTarea{tareas => [...tareas, envio]}
+        }
+        return(
+        <form onSubmit={onSubmit}>
+        <input type="text" placeholder="Ingresa Tarea" value={} onChange={onInputChange}
+        </form>
+        />
+        )
+        }
 
 CUSTOM(organizacion de codigo) HOOK(use...)
 USEEFFECT(al hacer algo en el componente se ejecute una vez) Y FECTH

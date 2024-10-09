@@ -1,4 +1,4 @@
 # ENLACES
-("https://git-scm.com/")[GIT]
+[GIT]("https://git-scm.com/")
 [NODE]("https://nodejs.org/en/download/package-manager/current")
 

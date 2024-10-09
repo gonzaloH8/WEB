@@ -20,7 +20,12 @@
 
   # INSTALACION DE ANGULAR
   - Abrir PowerShell
-  - Ejecutar 'nc new Nombre_Proyecto'
+  - Comprobar si tienes restringido los scripts 'Get-ExecutionPolicy'
+  - Si te sale por consola 'restricted' ejecuta 'Set-ExecutionPolicy Unrestricted'
+  - Instalacion de version de angular: npm i -g @angular/cli@16.2.10
+  - Desinstalacion Angular(Opcional): npm uninstall -g @angular/cli
+  - ng analytics disable --global
+  - Ejecutar 'ng new Nombre_Proyecto'
   - Confirmar
   - Ejecutar CSS
   - Se descarga una carpeta que trasladaremos al editor de texto

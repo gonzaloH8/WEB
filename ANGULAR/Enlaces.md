@@ -17,3 +17,21 @@
 - [TYPSCRIPT](https://www.typescriptlang.org/)
 - [JAVASCRIPT ESPAÑOL (MOZILLA)](https://developer.mozilla.org/es/docs/Web/JavaScript)
 - [CURSO YOUTUBE](https://www.youtube.com/watch?v=soInCF7nbDw)
+
+  # INSTALACION DE ANGULAR
+  - Abrir PowerShell
+  - Ejecutar 'nc new Nombre_Proyecto'
+  - Confirmar
+  - Ejecutar CSS
+  - Se descarga una carpeta que trasladaremos al editor de texto
+  - Instalar en Visual Studio
+    - Angular Essentials (Version 16)
+    - Angular Language Services
+    - Angular Snippets (Version 16)
+    - EsLint
+    - GitHub Copilot
+    - GitHub Copilot Chat
+    - Material Icon Themes
+    - Peacock
+    - Prettier - Code formater
+    - Winter is Coming Theme

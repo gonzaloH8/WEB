@@ -19,4 +19,9 @@
         hijo.component.css -- css del componente(Apariencia)
         hijo.component.html -- html del componente(Escritura)
         hijo.component.ts -- ts del componente(logica)
+
+# ESCRITURA
+    {{ ValorPlano }} -- muestra texto plano
+    (TipoEvento)="" -- llamamos al evento
+    [propiedades] -- muestra las propiedades de la etiqueta
         

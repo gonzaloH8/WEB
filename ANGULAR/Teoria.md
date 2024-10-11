@@ -60,3 +60,24 @@
     - EL archivo HTML de la plantilla(nombre-del-componente.component.html)
     - El archivo de estilos CSS(nombre-del-componente.component.css)
     - Un archivo de prueba(nombre-del-componente.component.spec.ts)
+
+# ENLACES DE DATOS
+Se refiere a la capacidad de conectar y sincronizar automaticamente los datos entre el modelo(que representa el estado de a aplacicacion) y la vista(la interfaz de usuario que muestra esos datos). El enlace de datos es una caracteristica fundamental que permite que los cambios en el modelo se reflejen automaticamente en la vista y viceversa, sin necesidad de intervencion manual.
+  ## FUNCION DEL ENALECE DE DATOS
+- Conexion automatica: sincroniza datos entre el modelo y la vista
+- Unidireccional: los cambios en el modelo se reflejan en la vista
+- Bidireccional: cambios en la vista actualizan el modelo(por ejemplo, formularios)
+- Reactivo: utiliza observables para actualizaciones en tiempo real
+- Simplifica Interaccion: facilita la creacion de apliaciones interactivas
+- Automatiza Actualizaciones: cambios se reflejan sin intervencion manual
+
+# METADATA
+Se refiere a la informacion adicional qie se proporciona mediante decoradores en las calses que definen componentes, modulos,servicios y otras partes de una apliacion. La metadata se utiliza para configurar y personalizar el comportamiento de estas partes de la aplicacion. Los decoradores, como @Component, @NgModule, @Injectable, entre otros, se utilizan para adjuntar esta metadata a las clases.
+  ## FUNCIONALIDAD
+- Configuracion: define como se comportan las partes de la apliacion
+- Decoradores: se utiliza con decoradores como @COmponent, @NgModule,@Injectable
+- Personalizacion: ajusta el comportamiento con propiedades clave
+- Componente: metadata para componentes, incluye plantilla y estilos
+- Modulo: configuracion de modulos, como declaraciones e importaciones
+- Servicio: metadata para sercios, define su alcance y proveedores
+- Directiva: define metadata de directivas personalizadas, como selectores

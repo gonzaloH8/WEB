@@ -81,3 +81,50 @@ Se refiere a la informacion adicional qie se proporciona mediante decoradores en
 - Modulo: configuracion de modulos, como declaraciones e importaciones
 - Servicio: metadata para sercios, define su alcance y proveedores
 - Directiva: define metadata de directivas personalizadas, como selectores
+
+# INFORMACION ENTRE COMPONENTES
+Los componentes puden comunicarse a traves de las propiedades de entrada y salida. Un componente padre puede pasar datos a un comonente hijo mediante la vinculacion de propiedades de entrada, y un componente hijo puede emitir eventos que el componente padre puede escuchar a traves de propiedades de salida.
+
+  ## INPUT
+  - En el componente hijo, puedes definir propiedades de entrada utilizando el decorador **@input()**. Estas propiedades representaran los datos que se esperan recibir del componente padre.
+
+        @input() datoEntrada: string;
+  
+  - Componente padre, puedes vincular datos a la propiedad de entrada del componente hijo utilizando la sintaxis de **corchetes[]** en el marcado del template.
+
+        <app-hijo [datoEntrada]="valorDesdePadre"></app-hijo>
+    
+  - Cuando el valor de la propiedad en el componente padre cambia. Angular automaticamente actualiza la propiedad de entrada en el comportamiento hijo. Esto proporciona una forma eficiente y automatica de mantener sincronizados los datos entre componentes.
+  
+        valorDesdePadre = "Holam Mundo!";
+    
+  - En el componente hijo, puedes utilizar la propiedad de entrada (datoEntrada en este caso) como cualquier otra propiedad local. Puedes mostrarla en el template, realizar logica basada en ese valor, etc.
+
+        <p>{{ datoEntrada }}</p>
+
+    ## OUTPUT
+  - Se usa **@Output** y **EventEmitter** para lograr una comunicacion entre compontente hijo y su componente padre. Declaras una propiedad con @Output en el componete hijo y emites eventos con EventEmitter.
+
+        @Output() MessageEvent = new EventEmitter<string>();
+        message: string = '';
+        sendMessage(){this.messageEvent.emit(this.message)}
+    
+  - Este archivo HTML contiene la interfaz de usuario del componente hijo, incluye un input para que el usuario ingrese un mensaje y un boton para enviarlo. Utiliza ngModel para vincular el input con la propiedad message del componente TypeScript
+
+        <div>
+          <label for="childInput">Mensaje:</label>
+          <input id="childInput" [(ngModel)]="message"/>
+          <button (click)="sendMessage()">Enviar Mensaje</button>
+        <div>
+    
+- El archivo TypesScript define el comportamiento ParentComponent, que tiene una propiedad (receivedMessage) para almacenar mensajes recibidos del componente hijo. Incluye un metodo(receiveMessage) que actualiza esta propiedad cuando se emite el evento desde el componente hijo
+
+        receiveMessage: string = '';
+        receiveMessage(message: string){this.receiveMessage = message;}
+
+- La plantilla HTML del componente padre incluye el componente hijo(<app-child>) y utiliza el evento de salida messageEvent para llamar al metodo receiveMessage cuando se emite un mensaje desde el componente hijo. Muestra el mensaje recibido en la interfaz del componente padre.
+
+         <div>
+            <app-child (messageEvent)="receiveMessage($event)"></app-child>
+            <p>Mensaje recibido en el padre: {{ recieveMessage }}</p>
+        </div>

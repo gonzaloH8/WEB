@@ -74,7 +74,7 @@
       }
 
 # HERMANO.COMPONET.TS
-    import { Component, OnInit } from '@angular/core';
+    import { Component, OnInit, inject-- } from '@angular/core';
     import { ServicioFamiliarService } from '../servicio-familiar.service';
     
     @Component({
@@ -89,14 +89,19 @@
       constructor(
         private _servicioFamiliar: ServicioFamiliarService
       ){}
+
+        _servicioFamiliar2 = inject(ServicioFamiliarService); -- otro metodo de inserccion de servicio
     
       ngOnInit(): void {
         this._servicioFamiliar.setHermanoPequeno('Irina');
+                _servicioFamiliar2 --
         this.nombre = this._servicioFamiliar.getHermanoPequeno();
+                        _servicioFamiliar2 --
       }
     
       saludar(){
         this._servicioFamiliar.saludar(this._servicioFamiliar.getHermanoGrande() || '')
+              _servicioFamiliar2 --  
       }
     
       preguntar(){

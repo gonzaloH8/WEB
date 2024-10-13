@@ -128,3 +128,26 @@ Los componentes puden comunicarse a traves de las propiedades de entrada y salid
             <app-child (messageEvent)="receiveMessage($event)"></app-child>
             <p>Mensaje recibido en el padre: {{ recieveMessage }}</p>
         </div>
+
+# SERVICIOS
+  Es una clase TypeScript que se utiliza para organizar y compartir lógica, datos o funcionalidades comunes entre diferentes componentes de una apliacion. Los servicios son una parte fundamental de la arquitectura de Angular y proporcionan una forma de centralizar y reutilizar la lógica que no está relacionada directamente con la interfaz de usuario
+  - Reutulización: Lógica compartida.
+  - Separación de preocupaciones: divide lógica y UI.
+  - Inyección de dependencias: Instancias proporcionadas
+  - Centralización de datos: Almacena y gestiona datos compartidos.
+  - Comunicación entre componetes: facilita la comunucación.
+  - Lifcycle independiente: no vinculado a vistas.
+  - Testeabilidad: facil de probar.
+
+        ng generate service nombre_del_servicio
+        ng g s nombre_del_servicio
+# DEPENDENCIAS
+Son los recursos externos y modulos de codigo que una apliacion necesita para funcionar correctamente. Estos recursos pueden incluir bibliotecas externas, módulos de Angular. servicios personalizados, componentes y otros elementos que se utilizan en la apliación para realizar tareas específicas.
+Las dependencias en Angular se gestionan principalmente a través del sistema de inyección de dependencias [DI],que es una caracteristica clave del framework.
+  - Recursos Externos: bibliotecas y recursos de terceros.
+  - Modulos de Angular: Unidades organizativas con funcionalidades
+  - Servicios Personalizados: funcionalidad compartida.
+  - Inyección de Dependencias: gestión automática de instancias.
+  - Inyección en Contructores: dependencias pasadas a través de constructores.
+  - Gestión de Ciclo de Vida: control de creación y destrucción.
+  - Testeabilidad: facilita pruebas unitarias y de integración

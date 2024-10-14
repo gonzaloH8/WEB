@@ -1,6 +1,8 @@
 
 # GENERACION DE COMPONENTES
     ng generate component nombre_carpeta -- genera una carpeta con todos los archivos que componenen el componente
+    ng generate service nombre_servidor -- genera un archivo de control de servicios
+    ng generate directive nombre_directiva -- genera un archiv de control de directivas
     ng add @angular/material
     ng add @angular/pwa
     ng add _____

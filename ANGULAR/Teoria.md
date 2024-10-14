@@ -162,3 +162,15 @@ Son instrucciones en el marcado HTML que proporcionan funcionalidad adicional a 
   - Directivas Personalizadas: creadas para necesidades especificas.
   - Inyeccion de Dependencias: acceso a servicios y datos.
   - Flexibilidad de Apliacion: se pueden apliacar como atributos o elementos.
+
+# PIPES
+Son una caracteristicas que permite formatear y transformar datos en la vista de una apliacion web de manera sencilla y legible. Los pipes son funciones que toman un valor de entrada(como una cadena de texto, un numero o un objeto) y lo procesan para proporcionar una representacion modificada o formateada en la interfaz de usuario.
+Los pipes se utilizan en las plantillas HTML de Angular y se aplican utilizando el simbolo de barra vertical | . Algunos ejemplos comunes de uso de pipes incluyen el formateo de fechas, numeros, monedasm texto en mayúsculas o minúsculas, entre otros.
+Angular proporciona una serie de pipes integrados, como DatePipe, UpperCasePipe, LowerCasePipe,CurrencyPipe,DecimalPipe,PercentPipe,entre otros. Ademas, también puedes crear tus propios pipes personalizados cuando necesites realizar transformaciones específicas.
+  - Formateo de Datos: transforma datos para representarlos.
+  - Sintaxis de Pipe: se apliaca en plantillas con | .
+  - Pipes Integrados: angular proporciona pipes predefinidos.
+  - Pipes Encadenados: se pueden combinar varios pipes.
+  - Pipes Personalizados: creados para necesidades específicas.
+  - Prámetros de Pipe: aceptan configuración adicional.
+  - Inmutabilidad: no alteran los datos originales.

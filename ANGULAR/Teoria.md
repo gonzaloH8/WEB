@@ -151,3 +151,14 @@ Las dependencias en Angular se gestionan principalmente a través del sistema de
   - Inyección en Contructores: dependencias pasadas a través de constructores.
   - Gestión de Ciclo de Vida: control de creación y destrucción.
   - Testeabilidad: facilita pruebas unitarias y de integración
+
+# DIRECTIVAS/ESTRUCTURAS DE CONTROL
+Son instrucciones en el marcado HTML que proporcionan funcionalidad adicional a los elementos DOM existentes o personalizan su comportamiento. Las directivas son un componente clave en la construcción de apliaciones web en Angular, ya que permiten extender y manipular el DOM de manera declarativa, lo que facilita la creación de interfaces de usuario dinámicas e interactivas. Angular proporciona varias directivas incorporadas y también permite la creación de directivas personalizadas.
+  - Instrucciones HTML: Estienden o personalizan elementos HTML.
+  - Directivas Incorporadas: ofrecen funcionalidad predefinida.
+  - Directivas Estructurales: manipulan la estructura del DOM.
+  - Directivas de Atributos: cambian atributos y propiedades.
+  - Directivas de Eventos: capturan y responden a eventos del usario.
+  - Directivas Personalizadas: creadas para necesidades especificas.
+  - Inyeccion de Dependencias: acceso a servicios y datos.
+  - Flexibilidad de Apliacion: se pueden apliacar como atributos o elementos.

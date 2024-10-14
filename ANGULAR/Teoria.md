@@ -177,42 +177,63 @@ Angular proporciona una serie de pipes integrados, como DatePipe, UpperCasePipe,
 
 # ENRUTAMIENTO
 Es la capacidad de navegar entre diferentes componentes o vistas de una aplicación web sin recargar la página completa. Permite crear apliaciones de una sola página(SPA) donde los cambios en la URL desencadenan la carga de diferentes componentes, proporcionando asi una experiencia de usuario más fluida y rápida.
-Las rutas definen la correspondencia entre la URL y los componentes que deben cargarse cuando esa URL esta activa. Se configuran en un array dentro el módulo de la aplicación.
-HTML
+- Las rutas definen la correspondencia entre la URL y los componentes que deben cargarse cuando esa URL esta activa. Se configuran en un array dentro el módulo de la aplicación.
+
+      const routes: Routes = [
+      { path: 'inicio', component: InicioComponent },
+      { path: 'productos', component: ProductosComponent },
+      { path: 'contacto', component: ContactoComponent },
+      ];
 - Router Outlet: la directiva router-outlet se utiliza en la plantilla para indicar el lugar donde Angular debe cargar dinámicamente los componentes asociados a las rutas.
-    Ejemplo: <router-outlet></router-outlet>
+  
+      Ejemplo: <router-outlet></router-outlet>
+
 - Navegación: se puede realizar mediante enlaces(<a>), botones, o programaticamente utilizando el servicio de Angular. 
-    Ejemplo: <a router-outlet="/Inicio">Inicio</a>
-Parametro de Ruta: pueden contener parámetros que permiten pasar datos específicos entre componentes
+
+      Ejemplo: <a router-outlet="/Inicio">Inicio</a>
+  
+- Parametro de Ruta: pueden contener parámetros que permiten pasar datos específicos entre componentes
 Ejemplo:
+
       { path: 'producto/id', component: DetalleProductoConponent }
-      <a [routerLink]='['/producto', producto.id]'>Ver Detalles</a>    
+      <a [routerLink]='['/producto', producto.id]'>Ver Detalles</a>
+- routerLinkActive
+
+      <nav>
+      <a routerLink='/inicio' routerLinkActive='active'>Inicio</a>
+      <a routerLink='/productos' routerLinkActive='active'>Productos</a>
+      <a routerLink='/contacto' routerLinkActive='active'>Contactos</a>
+  
 - Parametros por la URL: 
     1)Definir una ruta con varios componentes
-    Ejemplo: const routes: Routes = [{ path: 'producto/:categoria/:id', component: DetalleProductoComponent },];
-    2) Enlazar a la ruta con múltiples parámetros
-    Ejemplo: <a [routerLink]='['/producto', producto.categoria, producto.id]'>Ver detalles</a>
-    
-TS
-3) Recupera los parámetros en el componente
-Ejemplo:
-  import { ActivedRoute } from '@angular/router'
-  constructor(private route: ActivedRoute){}
-  ngOnInit(){
-  this.route.params.subscribe(params => {
-  const categoria = params['categoria'];
-  const productId = params['id'];
-  // Hacer algo con los valores de los paramentros
-  })
-  }
 
-// METODO QUE SE VA A USAR DE NAVEGADOR
-import { Router } from '@angular/router'
-constructor(private router: Router){}
-navegarAProducto(productoID: number){
-// Puedes navegar a una ruta específica programáticamente
-this.router.navigate(['/producto', productoID]);
-}
+      Ejemplo: const routes: Routes = [{ path: 'producto/:categoria/:id', component: DetalleProductoComponent },];
+  
+    2) Enlazar a la ruta con múltiples parámetros
+  
+      Ejemplo: <a [routerLink]='['/producto', producto.categoria, producto.id]'>Ver detalles</a>
+    
+  3) Recupera los parámetros en el componente
+
+          Ejemplo:
+            import { ActivedRoute } from '@angular/router'
+            constructor(private route: ActivedRoute){}
+            ngOnInit(){
+            this.route.params.subscribe(params => {
+            const categoria = params['categoria'];
+            const productId = params['id'];
+            // Hacer algo con los valores de los paramentros
+            })
+            }
+
+- Navegar desde el controller: proporciona métodos para realizar la navegación entre rutas(Este método se va a usar)
+
+      import { Router } from '@angular/router'
+      constructor(private router: Router){}
+      navegarAProducto(productoID: number){
+      // Puedes navegar a una ruta específica programáticamente
+      this.router.navigate(['/producto', productoID]);
+      }
 
 
 

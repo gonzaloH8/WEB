@@ -235,5 +235,46 @@ Ejemplo:
       this.router.navigate(['/producto', productoID]);
       }
 
+# ESTRUCTURAS DE CONTTROL
+Las estructuras de control son herramientes que te permiten manipular el flujo de ejecución en tu apliación
 
+NGIF: permite mostrar u ocultar un elemento en función de una expresion booleana
+  <div ngIf="mostrarElemento">
+    Contenido visisble si mostrarElemento es true
+  </div>
 
+NGFOR:: utilizado para iterar sobre una lista y renderizar elementos repetitivos
+  <ul>
+    <li *ngFor="let item of listaItems">
+      {{ item }}
+    </li>
+  </ul>
+
+NGSWITCH: muestra un bloque de contenido segun el valor de una expresion
+  <div [ngSwitch]="opcion">
+    <p *ngSwitchCase="'opcion1'">Contenido para opcion 1</p>
+    <p *ngSwitchCase="'opcion2'">Contenido para opcion 2</p>
+    <p *ngSwitchDefault>Contenido por defecto</p>
+  </div>
+
+NGCLASS: permite cambiar dinamicamente las clases un elemento
+  <div [ngClass]="{'clase1': condicion1, 'clase2': condicion2 }">
+    <!--Contenido con clases dinamicas-->
+  </div>
+
+ NGSTYLE: permite cambiar dinamicamente los estilos un elemento
+ <div [ngStyle]="{'color': color, 'font-size': tamano}">
+   <!--Contenido con estilos dinamicos-->
+ </div>
+
+ NGCONTSINER: estructura de control que no afecta al DOM. Se utiliza para agrupar elementos sin agregar nodos adicionales al arbol DOM
+   <ng-container *ngIf='xondicion'>
+     <!--Contenido que no afecta al DOM directamente-->
+  </ng-container>
+
+OTRAS ESTRUCTUTAS DE CONTROL
+  ngTemplate
+  ngPlural
+  ngComponenetOutlet
+
+MOC: pagina falsa de muestra

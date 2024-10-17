@@ -1,0 +1,20 @@
+<h1>PRODUCTOS DE LIMPIEZA</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Detalle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of producstList">
+        <th scope="row">{{producto.id}}</th>
+        <td>{{producto.name}}</td>
+        <td [ngClass]="{'red': producto.price > 5}">{{producto.price | currency}}</td>
+        <button type="button" class="btn btn-outline-primary" [routerLink]="['/product', producto.id]">Detalle</button>
+      </tr>
+      
+    </tbody>
+  </table>

@@ -278,3 +278,20 @@ OTRAS ESTRUCTUTAS DE CONTROL
   ngComponenetOutlet
 
 MOC: pagina falsa de muestra
+
+# FORMULARIOS DE PLANTILLA
+Necesita de importar el form moduls: import { FormsModulo } from '@angular/forms'
+Utilizan sintaxis del template del HTML para construir y validar formularios
+La directiva ngForm se utiliza para crear un formulario y ngModel para enlazar datos bidireccionalmente
+    <form #myForm="ngForm" (ngSubmit)='onSubmit()'>
+    <label for="name">Nombre:</label>
+    <input tye="text" id="name" name="name" [(ngModel)]='user.name' required>
+    </form>
+Manejo de estado y errores
+Angular gestiona el estado y la validacion automaticamente
+Se utiliza la propiedad ngModel.valid para verificar si un campo es valido
+<div *ngIF="!name.valid && name.touched">Nombre es obligatorio</div>
+
+# FORMULARIOS REACTIVOS
+Los formularios reactivos se construyen en el componente utilizando el servicio FormBuilder
+Los controles se definen explicitamente y se vinculan al formulario

@@ -3,7 +3,7 @@
 - [VISUALSTUDIOCODE(EDITOR DE CODIGO)](https://code.visualstudio.com/download)
 - [GIT(MANEJADOR DE VERSIONES)](https://git-scm.com/)
 - [NODE](https://nodejs.org/en/)
-- [POSTMAN](https://www.postman.com/downloads/)
+- [POSTMAN(Generacion de Codigo APIs)](https://www.postman.com/downloads/)
 - [ANGULAR SNIPPTES](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2)
 - [BOOSTRAP](https://getbootstrap.com/)
 - [ANGULAR MATERIAL](https://material.angular.io/)
@@ -45,4 +45,13 @@
   - npm i bootstrap@5.3.3 -- se instala la carpeta de boostrap en node_modules y se genera en package.json package-dependencies-boostrap
   - Buscar el archivo /boostrap/dist/css/boostrap.min.css, copiar su ruta y pegarla en el archivo angular.json seccion 1ºbuild/style, hay que modificar las barras invertidas por barras normales y entre comillarlo
   - Buscar el archivo /boostrap/dist/js/boostrap.bundle.min.js, copiar su ruta y pegarla en el archivo angular.json seccion 1ºbuild/scripts, hay que modificar las barras invertidas por barras normales y entre comillarlo
-  
+
+# GENERACION DE CODIGO DE APIS
+- Coges el codigo de una API
+- Lo pasas por el programa POSTMAN, verificando los datos que vas a manejar y como los quieres manejar
+- Copias el codigo generado en el POSTMAN
+- Lo pegas en la pagina de QUICK, seleccionas el nombre elegido para la interface, seleccionar TYPESCRIPT y lo generado lo pegas en service.ts
+
+# APIS
+  [TANSFORMACIÓN JSON-TYPESCRIPT](https://app.quicktype.io/)
+  [API PRODUCTOS](https://fakestoreapi.com/docs)

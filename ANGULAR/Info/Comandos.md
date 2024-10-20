@@ -85,3 +85,11 @@
         boostrap: [AppComponent] -- boostrap funciones
     })
     export class AppModule{} -- clases
+
+# MANEJO DE INFORMACION
+    get: obtengo/pido la informacion. Misma URL que put y delete / id
+    put: para editar una informacion que ya este en la Base de Datos/servicio. Misma URL que get y delete / id
+    delete: para eliminar un dato a traves de una id. Misma URL que get y put / id
+    getAll/post: envio la informacion. Tienen la misma URL
+    
+# ERRORES 400-500

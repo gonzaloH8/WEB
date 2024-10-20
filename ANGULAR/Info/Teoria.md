@@ -33,7 +33,7 @@
   - Dependencias
   - Plantillas
   - Directivas
-  - Enrtamiento
+  - Enrutamiento
   - Metadata
 
   ## MODULOS
@@ -96,7 +96,7 @@ Los componentes puden comunicarse a traves de las propiedades de entrada y salid
     
   - Cuando el valor de la propiedad en el componente padre cambia. Angular automaticamente actualiza la propiedad de entrada en el comportamiento hijo. Esto proporciona una forma eficiente y automatica de mantener sincronizados los datos entre componentes.
   
-        valorDesdePadre = "Holam Mundo!";
+        valorDesdePadre = "Hola Mundo!";
     
   - En el componente hijo, puedes utilizar la propiedad de entrada (datoEntrada en este caso) como cualquier otra propiedad local. Puedes mostrarla en el template, realizar logica basada en ese valor, etc.
 
@@ -139,8 +139,6 @@ Los componentes puden comunicarse a traves de las propiedades de entrada y salid
   - Lifcycle independiente: no vinculado a vistas.
   - Testeabilidad: facil de probar.
 
-        ng generate service nombre_del_servicio
-        ng g s nombre_del_servicio
 # DEPENDENCIAS
 Son los recursos externos y modulos de codigo que una apliacion necesita para funcionar correctamente. Estos recursos pueden incluir bibliotecas externas, módulos de Angular. servicios personalizados, componentes y otros elementos que se utilizan en la apliación para realizar tareas específicas.
 Las dependencias en Angular se gestionan principalmente a través del sistema de inyección de dependencias [DI],que es una caracteristica clave del framework.
@@ -237,47 +235,16 @@ Ejemplo:
 
 # ESTRUCTURAS DE CONTTROL
 Las estructuras de control son herramientes que te permiten manipular el flujo de ejecución en tu apliación
-
-NGIF: permite mostrar u ocultar un elemento en función de una expresion booleana
-  <div ngIf="mostrarElemento">
-    Contenido visisble si mostrarElemento es true
-  </div>
-
-NGFOR:: utilizado para iterar sobre una lista y renderizar elementos repetitivos
-  <ul>
-    <li *ngFor="let item of listaItems">
-      {{ item }}
-    </li>
-  </ul>
-
-NGSWITCH: muestra un bloque de contenido segun el valor de una expresion
-  <div [ngSwitch]="opcion">
-    <p *ngSwitchCase="'opcion1'">Contenido para opcion 1</p>
-    <p *ngSwitchCase="'opcion2'">Contenido para opcion 2</p>
-    <p *ngSwitchDefault>Contenido por defecto</p>
-  </div>
-
-NGCLASS: permite cambiar dinamicamente las clases un elemento
-  <div [ngClass]="{'clase1': condicion1, 'clase2': condicion2 }">
-    <!--Contenido con clases dinamicas-->
-  </div>
-
- NGSTYLE: permite cambiar dinamicamente los estilos un elemento
- <div [ngStyle]="{'color': color, 'font-size': tamano}">
-   <!--Contenido con estilos dinamicos-->
- </div>
-
- NGCONTSINER: estructura de control que no afecta al DOM. Se utiliza para agrupar elementos sin agregar nodos adicionales al arbol DOM
-   <ng-container *ngIf='xondicion'>
-     <!--Contenido que no afecta al DOM directamente-->
-  </ng-container>
-
-OTRAS ESTRUCTUTAS DE CONTROL
-  ngTemplate
-  ngPlural
-  ngComponenetOutlet
-
-MOC: pagina falsa de muestra
+- NGIF: permite mostrar u ocultar un elemento en función de una expresion booleana
+- NGFOR:: utilizado para iterar sobre una lista y renderizar elementos repetitivos
+- NGSWITCH: muestra un bloque de contenido segun el valor de una expresion
+- NGCLASS: permite cambiar dinamicamente las clases un elemento
+- NGSTYLE: permite cambiar dinamicamente los estilos un elemento
+- NGCONTSINER: estructura de control que no afecta al DOM. Se utiliza para agrupar elementos sin agregar nodos adicionales al arbol DOM
+- MOC: pagina falsa de muestra
+- ngTemplate
+- ngPlural
+- ngComponenetOutlet
 
 # FORMULARIOS DE PLANTILLA
 Necesita de importar el form moduls: import { FormsModulo } from '@angular/forms'

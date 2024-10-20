@@ -273,3 +273,28 @@ El ciclo de vida de un compoenente se cimpone de una serie de eventos que ocurre
   - ngAfterViewInit: ocurre despues de que Angular haya inicializado las vistas del componente.
   - ngAfterViewChecked: se ejecuta despues de cada verificacion de las vistas del componente.
   - ngOnDestroy: se dispara justo despues de que Angular destruya el componente.
+
+# API
+Las API(Interfaces de Programacion de APliaciones, por sus siglas en ingles) se utilizan para permitir la comunicacion entre diferentes sistemas de software. Son conjuntos de reglas y definiciones que permiten que apliaciones y servicios se comuniquen entre si.
+
+## INTEGRACION DE SERVICIOS
+Las APIs permiten que diferentes servicios web se integren entre si. Por ejemplo, tu apliacion puede utilizar la API de Google Maps para mostrar mapas, la API de Twitter para mostrar tweets, etc
+
+## ACCESO A DATOS EXTERNOS
+Las APIs el acceso a datos y recursos que residen en servidores externos. Puedes usar APIs para obtener informacion de bases de datos, servicios en la nube u otros recursos en linea.
+
+## INTERACCION CON PLATAFORMAS SOCIALES
+Muchas plataformas sociales, como Facebook, Twitter o Instagram, proporcionan APIs que permiten a los desarrolladores acceder a funciones específicas de esas plataformas, como publicar contenido o recuperar datos de perfiles de usuario
+
+## DESARROLLO DE APLICACIONES MÓVILES
+Las aplicaciones móviles a menudo utilizan APIs para conectarse a servicios en la nube y acceder a funcionalidades específicas, como notificaciones push, almacenamiento en la nube y autentificación.
+
+## AUTOMATIZACIÓN DE PROCESSOS
+Las APIs permiten la automatización de procesos al permitir que sistemas diferentes se comuniquen y compartan datos de manera eficiente. Por ejemplo, una empresa puede tener un sistema de gestión de inventario que se conecta a una API de proveedores para realizar pedidos automáticamente cuando se agota el stock.
+
+## DESARROLLO DE APLIACINES WEB
+Las apliaciones web modernas a menudo utilizan APIs para cargar datos de forma asíncrona, lo que mejora la velocidad y la eficiencia de la aplicación.
+
+## MICROSERVICIOS
+En arquitecturas de microservicios, los diferentes componenetes del sistema se comunican a través de APIs, lo que permite la escalabilidad y flexibilidad en el desarrollo y mantenimiento de aplicaciones.
+

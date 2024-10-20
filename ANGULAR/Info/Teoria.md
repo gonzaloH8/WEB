@@ -295,3 +295,14 @@ Se utiliza la propiedad ngModel.valid para verificar si un campo es valido
 # FORMULARIOS REACTIVOS
 Los formularios reactivos se construyen en el componente utilizando el servicio FormBuilder
 Los controles se definen explicitamente y se vinculan al formulario
+
+# CICLOS DE VIDA
+El ciclo de vida de un compoenente se cimpone de una serie de eventos que ocurren desde la creacion hasta la destrucion del componente
+  - ngOnChanges: se dispara cuando los datos de entrada(@Input) del componente cambian.
+  - ngOnInit: ocurre despues de que Angular ha inicializado todas las propiedades del componente.
+  - ngDoCheck: se ejecuta durante cada detección de cambios y permte realizar acciones de verificación personalizadas.
+  - ngAfterContentInit: icurre despues de que Angular haya proyectado el contenido en el componente.
+  - ngAfterContentChecked: se ejecuta despues de cada verificacion del contenido proyectado.
+  - ngAfterViewInit: ocurre despues de que Angular haya inicializado las vistas del componente.
+  - ngAfterViewChecked: se ejecuta despues de cada verificacion de las vistas del componente.
+  - ngOnDestroy: se dispara justo despues de que Angular destruya el componente.

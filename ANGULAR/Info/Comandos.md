@@ -63,3 +63,25 @@
        <!--Contenido que no afecta al DOM directamente-->
     </ng-container>
 
+# APP-MODUL
+    IMPORTACIONES
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+    import { HomeComponent } from './home/home.component';
+    import { AppComponent } from './app.component';
+    @NGMODULE: ({
+        declarations: [ -- Inicializacion de componentes
+            AppComponent,
+            HomeComponent
+        ]
+        imports: [     -- Inicializacion de modulos
+            HttpClientModule,
+            BrowserModule,
+            AppRoutingModule,
+            FormsModule, --formularios de tipo plantilla
+            ReactiveFormsModule -- formularios de tipo reactive         
+        ]
+        boostrap: [AppComponent] -- boostrap funciones
+    })
+    export class AppModule{} -- clases

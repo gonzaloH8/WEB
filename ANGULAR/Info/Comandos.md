@@ -1,4 +1,3 @@
-
 # GENERACION DE COMPONENTES
     ng generate component nombre_carpeta -- genera una carpeta con todos los archivos que componenen el componente
     ng generate service nombre_servidor -- genera un archivo de control de servicios
@@ -28,3 +27,39 @@
     (TipoEvento)="" -- llamamos al evento
     [propiedades] -- muestra las propiedades de la etiqueta
         
+
+# ESCTRUCTURAS DE CONTROL
+## NGIF 
+    <div ngIf="mostrarElemento">
+      Contenido visisble si mostrarElemento es true
+    </div>
+
+## NGFOR
+    <ul>
+      <li *ngFor="let item of listaItems">
+        {{ item }}
+      </li>
+    </ul>
+
+## NGSWITCH
+    <div [ngSwitch]="opcion">
+      <p *ngSwitchCase="'opcion1'">Contenido para opcion 1</p>
+      <p *ngSwitchCase="'opcion2'">Contenido para opcion 2</p>
+      <p *ngSwitchDefault>Contenido por defecto</p>
+    </div>
+
+## NGCLASS
+    <div [ngClass]="{'clase1': condicion1, 'clase2': condicion2 }">
+      <!--Contenido con clases dinamicas-->
+    </div>
+  
+## NGSTYLE
+    <div [ngStyle]="{'color': color, 'font-size': tamano}">
+     <!--Contenido con estilos dinamicos-->
+    </div>
+
+ ## NGCONTSINER
+     <ng-container *ngIf='xondicion'>
+       <!--Contenido que no afecta al DOM directamente-->
+    </ng-container>
+

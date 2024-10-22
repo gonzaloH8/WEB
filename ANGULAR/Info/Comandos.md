@@ -82,6 +82,23 @@
        <!--Contenido que no afecta al DOM directamente-->
     </ng-container>
 
+# INPUT
+    @input() datoEntrada: string; -- otorgas la funcionalidad a la variable para que tenga el valor del padre
+    <app-hijo [datoEntrada]="ValorDesdePadre"></app-hijo> -- asignacion de la variable-hijo un valor de variable-padre
+    ValorDesdePadre="HolaMundo"; -- variable del padre con un valor
+    <p>{{ datoEntrada }}</p> -- imprimes en web el valor
+
+# OUTPUT
+    @Output() variable_hijo = new EventEmitter<string/void/number>(); -- permite enviar eventos desde el hijo al padre
+    (variable_hijo)="evento()" -- imprimimos en el HTML padre los eventos del hijo
+
+# ENRUTAMIENTO
+    const routes: Routes = [
+    { path: 'inicio', component: InicioComponent },
+    { path: 'productos', component: ProductosComponent },
+    { path: 'contacto', component: ContactoComponent },
+    ];
+
 # APP-MODUL
     IMPORTACIONES
     import { NgModule } from '@angular/core';

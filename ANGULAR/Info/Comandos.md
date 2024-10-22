@@ -1,15 +1,33 @@
-# GENERACION DE COMPONENTES
-    ng generate component nombre_carpeta -- genera una carpeta con todos los archivos que componenen el componente
+# GENERACION DE ARCHIVOS PARA TU PROYECTO
+    ng new nombre_proyecto -- genera todos los archivos necesarios para empezar el proyecto
+    ng generate component nombre_carpeta -- genera una carpeta con todos los archivos que componen el componente
     ng generate service nombre_servidor -- genera un archivo de control de servicios
-    ng generate directive nombre_directiva -- genera un archiv de control de directivas
-    ng generate pipe nombre_pipe
+    ng generate directive nombre_directiva -- genera un archivo de control de directivas
+    ng generate pipe nombre_pipe -- genera un archivo de pipes
     ng add @angular/material
     ng add @angular/pwa
     ng add _____
     ng test
     ng build
-    ng version -- permite saber la version de anglar instalada
 
+    REVISION DE VERSION DE LOS DISTINTOS PROGRAMAS NECESARIOS PARA ANGULAR
+    node -v -- verifica que version tienes instalada
+    npm -v -- verifica la version de npm(Node Package Manager) instalada
+    ng version -- permite saber la version de angular instalada
+
+    INSTALACION DE ANGULAR
+    bash? npm install -g @angular/cli@latest -- instalara la ultima version de Angular
+    npm i -g @angular/cli@16.2.10 -- instala la version de Angular 16.2.10
+    ng new nombre_proyecto -- genera todos los archivos necesarios para empezar el proyecto
+    ng new nombre_proyecto --defaults --style=scss --standalone --routing --inline-template --inline-style -- revisar comando
+    
+    ACTUALIZACION DE ANGULAR
+    npm uninstall -g @angular/cli -- desinstala Angular
+    npm cache verify -- limpia la cache de npm para evitar conflicto
+    bash? npm install -g @angular/cli@latest -- instalara la ultima version de Angular
+    ng update -- actualiza los paquetes de package.json
+    npm install typescript@latest --save-dev -- actualiza Typesscript a la ultima version
+    
 # ESTRUCTURA
     Index.html-style.css-main.ts(Estructura PADRE)
     Componenete Padre: 

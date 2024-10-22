@@ -8,6 +8,7 @@
     ng add _____
     ng test
     ng build
+    ng version -- permite saber la version de anglar instalada
 
 # ESTRUCTURA
     Index.html-style.css-main.ts(Estructura PADRE)

@@ -1,8 +1,3 @@
-# AYUDA
-Verde + U: fichero nuevos y no integrados en git. Puedes eliminar .git o integrarlo para eliminar esto de tus archivos
-Amarillo + M: fichero modificado
-Rojo + D: fichero eliminado, error en el fichero
-
 # INSTALACIONES NECESARIAS PARA TRABAR CON ANGULAR
 - [CHROME(NAVEGADOR)](https://www.google.com/intl/es_es/chrome/)
 - [VISUALSTUDIOCODE(EDITOR DE CODIGO)](https://code.visualstudio.com/download)
@@ -13,6 +8,7 @@ Rojo + D: fichero eliminado, error en el fichero
 - [BOOSTRAP](https://getbootstrap.com/)
 - [ANGULAR MATERIAL](https://material.angular.io/)
 - [ANGULAR DEVTOOLS](https://chromewebstore.google.com/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh)
+- [TYPESCRIPT](https://www.typescriptlang.org/download/)
 
 # DOCUMENTACION OFICIAL
 - [NUEVA DOC ANGULAR](https://angular.dev/)

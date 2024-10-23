@@ -50,48 +50,6 @@ Ejemplo de funcion don mas de un argumento
 Llamar a la clase useState
 import { useState } from "react"
 
-# FUNCIONALIDAD CONTADOR
-    MAIN
-      <ContadorApp value={1}/>
-    
-    import { useState } from "react"
-    export const ContadorApp = ({ value }) => {
-    const [contador, setContador] = useState (value)
-    const handleClick = ()  => {
-      setContador{contador + 1}
-    }
-    return (
-      <>
-        <h1>Contador: </h1>
-        <p>{contador}</p>
-        <button onClick={handleClick}> soy un boton</button>
-      </>
-      )
-    }
-
-# FUNCIONALIDAD LISTAS
-    const Items = () => {
-    return(
-    <li>{nombre} {visto && '✅'}</li> // forma 1
-    <li>{nombre} {visto ? '✅' : '⛔'}</li> // forma 2
-    )
-    }
-    
-    export const ListadoApp = () => {
-      return(
-      <>
-        <h1>Listado de Temas del Curso</h1>
-        <ul>
-          <Items id: 1, nombre="Irina" visto={true}></Items>
-          <Items id: 2, nombre="Marcos" visto={true}></Items>
-          <Items id: 3, nombre="Daniel" visto={true}></Items>
-          <Items id: 4, nombre="Cristina" visto={false}></Items>
-          <Items id: 5, nombre="Sara" visto={false}></Items>
-        </ul>
-      </>
-      )
-    }
-
 # MAP y HERENCIA
     export const ListadoApp = () => {
     const addTask = () => {

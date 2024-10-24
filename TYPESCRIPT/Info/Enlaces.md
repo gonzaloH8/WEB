@@ -8,3 +8,4 @@
 # DOCUMENTACION
 - [TYPSCRIPT](https://www.typescriptlang.org/)
 - [JAVASCRIPT ESPAÑOL (MOZILLA)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+- [CURSO YOUTUBE](https://www.youtube.com/watch?v=UTA5bykCx2c&t=908s)

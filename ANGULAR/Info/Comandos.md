@@ -1,5 +1,14 @@
-# GENERACION DE ARCHIVOS PARA TU PROYECTO
-    ng new nombre_proyecto -- genera todos los archivos necesarios para empezar el proyecto
+# PASOS PARA LA PREPARACION DE UN PROYECTO
+## GENERACION DEL PROYECTO
+    ng new nombre_proyecto -- genera todos los archivos necesarios para empezar el proyecto(POWERSHELL)
+    Decir no a que se comunique con google
+    
+## INSTALACIÓN DE BOOSTRAP
+    npm i bootstrap@5.3.3 -- se instala la carpeta de boostrap en node_modules y se genera en package.json package-dependencies-boostrap
+    Buscar el archivo /boostrap/dist/css/boostrap.min.css, copiar su ruta y pegarla en el archivo angular.json seccion 1ºbuild/style, hay que modificar las barras invertidas por barras normales y entre comillarlo
+    Buscar el archivo /boostrap/dist/js/boostrap.bundle.min.js, copiar su ruta y pegarla en el archivo angular.json seccion 1ºbuild/scripts, hay que modificar las barras invertidas por barras normales y entre comillarlo
+
+## FICHEROS
     ng generate component nombre_carpeta -- genera una carpeta con todos los archivos que componen el componente
     ng generate service nombre_servidor -- genera un archivo de control de servicios
     ng generate directive nombre_directiva -- genera un archivo de control de directivas
@@ -10,25 +19,11 @@
     ng test
     ng build
 
-    REVISION DE VERSION DE LOS DISTINTOS PROGRAMAS NECESARIOS PARA ANGULAR
-    node -v -- verifica que version tienes instalada
-    node -init -- inicia node
-    npm -v -- verifica la version de npm(Node Package Manager) instalada
-    npm start -- inicia el proyecto y generar un localHost para ver la pagina en local
-    ng version -- permite saber la version de angular instalada
-
-    INSTALACION DE ANGULAR
-    bash? npm install -g @angular/cli@latest -- instalara la ultima version de Angular
-    npm i -g @angular/cli@16.2.10 -- instala la version de Angular 16.2.10
-    ng new nombre_proyecto -- genera todos los archivos necesarios para empezar el proyecto
-    ng new nombre_proyecto --defaults --style=scss --standalone --routing --inline-template --inline-style -- revisar comando
-    
-    ACTUALIZACION DE ANGULAR
-    npm uninstall -g @angular/cli -- desinstala Angular
-    npm cache verify -- limpia la cache de npm para evitar conflicto
-    bash? npm install -g @angular/cli@latest -- instalara la ultima version de Angular
-    ng update -- actualiza los paquetes de package.json
-    npm install typescript@latest --save-dev -- actualiza Typesscript a la ultima version
+## GENERACION DE CODIGO DE APIS
+    Coges el codigo de una API
+    Lo pasas por el programa POSTMAN, verificando los datos que vas a manejar y como los quieres manejar
+    Copias el codigo generado en el POSTMAN
+    Lo pegas en la pagina de QUICK, seleccionas el nombre elegido para la interface, seleccionar TYPESCRIPT y lo generado lo pegas en service.ts
     
 # ESTRUCTURA
     Index.html-style.css-main.ts(Estructura PADRE)

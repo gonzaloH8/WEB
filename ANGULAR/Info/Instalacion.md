@@ -32,3 +32,23 @@
     - Peacock
     - Prettier - Code formater
     - Winter is Coming Theme
+
+## REVISION DE VERSION DE LOS DISTINTOS PROGRAMAS NECESARIOS PARA ANGULAR
+    node -v -- verifica que version tienes instalada
+    node -init -- inicia node
+    npm -v -- verifica la version de npm(Node Package Manager) instalada
+    npm start -- inicia el proyecto y generar un localHost para ver la pagina en local
+    ng version -- permite saber la version de angular instalada
+
+## INSTALACION DE ANGULAR
+    bash? npm install -g @angular/cli@latest -- instala la ultima version de Angular
+    npm i -g @angular/cli@16.2.10 -- instala la version de Angular 16.2.10
+    ng new nombre_proyecto -- genera todos los archivos necesarios para empezar el proyecto
+    ng new nombre_proyecto --defaults --style=scss --standalone --routing --inline-template --inline-style -- revisar comando
+    
+## ACTUALIZACION DE ANGULAR
+    npm uninstall -g @angular/cli -- desinstala Angular
+    npm cache verify -- limpia la cache de npm para evitar conflicto
+    bash? npm install -g @angular/cli@latest -- instalara la ultima version de Angular
+    ng update -- actualiza los paquetes de package.json
+    npm install typescript@latest --save-dev -- actualiza Typesscript a la ultima version

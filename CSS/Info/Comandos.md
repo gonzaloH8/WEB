@@ -1,10 +1,9 @@
 # TAMAÑO DE LA PAGINA PADRE   
-        *{
+    *{
     box-sizing: border-box;
     font-family: 'Smokum', cursive;
-      }
-
-# SHORT CODE
+    }
+      
 # POSITION
       pos -> position: relative;
       pos:s -> position: static;
@@ -80,20 +79,20 @@
     flex-wrap: wrap;
 
 # MOVIMIENTO DE CAJAS GRID
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr;
-        gap: 10px;
-        font-weight: bolder;
+    display: grid; 
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; 
+    gap: 10px;
+    font-weight: bolder;
     MOVIMIENTO DE CAJAS SEGUN LA MEDIDA DEL DISPOTIVO
-        grid-row: 1;// una fila
-        grid-column: 1 /span 3; // una columna de 3 espacios
+    grid-row: 1;// una fila
+    grid-column: 1 /span 3; // una columna de 3 espacios
 
 # MOVIMIENTO DE CAJAS VARIAS
-        display: block;
-        position: absolute;
-        float: left;
-        z-index: 1;
+    display: block;
+    position: absolute;
+    float: left;
+    z-index: 1;
     
 # ESTILOS VARIOS
     text-decoration: none;
@@ -104,7 +103,7 @@
     Buscar
 
 # TAMAÑOS SEGUN DISPOSITIVOS
-        TABLET
-            @media (min-width: 720px)
-        DESKTOP
-            @media (min-width: 1020px)
+    TABLET
+    @media (min-width: 720px)
+    DESKTOP
+    @media (min-width: 1020px)

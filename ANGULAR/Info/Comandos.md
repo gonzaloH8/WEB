@@ -12,7 +12,9 @@
 
     REVISION DE VERSION DE LOS DISTINTOS PROGRAMAS NECESARIOS PARA ANGULAR
     node -v -- verifica que version tienes instalada
+    node -init -- inicia node
     npm -v -- verifica la version de npm(Node Package Manager) instalada
+    npm start -- inicia el proyecto y generar un localHost para ver la pagina en local
     ng version -- permite saber la version de angular instalada
 
     INSTALACION DE ANGULAR
@@ -46,7 +48,6 @@
     (TipoEvento)="" -- llamamos al evento
     [propiedades] -- muestra las propiedades de la etiqueta
         
-
 # ESCTRUCTURAS DE CONTROL
 ## NGIF 
     <div ngIf="mostrarElemento">

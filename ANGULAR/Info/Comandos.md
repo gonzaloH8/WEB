@@ -5,8 +5,8 @@
     
 ## INSTALACIÓN DE BOOSTRAP
     npm i bootstrap@5.3.3 -- se instala la carpeta de boostrap en node_modules y se genera en package.json package-dependencies-boostrap
-    Buscar el archivo /boostrap/dist/css/boostrap.min.css, copiar su ruta y pegarla en el archivo angular.json seccion 1ºbuild/style, hay que modificar las barras invertidas por barras normales y entre comillarlo
-    Buscar el archivo /boostrap/dist/js/boostrap.bundle.min.js, copiar su ruta y pegarla en el archivo angular.json seccion 1ºbuild/scripts, hay que modificar las barras invertidas por barras normales y entre comillarlo
+    En node_modules/boostrap/dist/css/boostrap.min.css -- copiar su ruta y pegarla en el archivo angular.json seccion 1ºbuild/style, hay que modificar las barras invertidas por barras normales y entre comillarlo 
+    En node_modules/boostrap/dist/js/boostrap.bundle.min.js, copiar su ruta y pegarla en el archivo angular.json seccion 1ºbuild/scripts, hay que modificar las barras invertidas por barras normales y entre comillarlo
 
 ## FICHEROS
     ng generate component nombre_carpeta -- genera una carpeta con todos los archivos que componen el componente
@@ -27,6 +27,11 @@
     
 # ESTRUCTURA
     Index.html-style.css-main.ts(Estructura PADRE)
+    Admin(admin-layout, calendar, dashboard)
+    articles(article-detail, aticle-list, articles-routes.ts)
+    auth(login, register,auth.routes.ts)
+    core(guards,interceptors,models,services)
+    shared(componentes[header,nav,main,aside,footer],directives,pipes)
     Componenete Padre: 
         app-routing.module.ts -- soporte al ts principal
         app.component.css -- css del componente(Apariencia)

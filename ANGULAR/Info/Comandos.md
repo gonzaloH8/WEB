@@ -24,25 +24,28 @@
     Lo pasas por el programa POSTMAN, verificando los datos que vas a manejar y como los quieres manejar
     Copias el codigo generado en el POSTMAN
     Lo pegas en la pagina de QUICK, seleccionas el nombre elegido para la interface, seleccionar TYPESCRIPT y lo generado lo pegas en service.ts
+
+# ARCHIVOS
+- package.json -- dependencias de librerias que se han instalado. Permite añadir mas, actualizar librerias,etc
+- 
     
 # ESTRUCTURA
-    Index.html-style.css-main.ts(Estructura PADRE)
-    Admin(admin-layout, calendar, dashboard)
-    articles(article-detail, aticle-list, articles-routes.ts)
-    auth(login, register,auth.routes.ts)
-    core(guards,interceptors,models,services)
-    shared(componentes[header,nav,main,aside,footer],directives,pipes)
-    Componenete Padre: 
-        app-routing.module.ts -- soporte al ts principal
-        app.component.css -- css del componente(Apariencia)
-        app.component.html -- html del componente(Escritura)
-        app.component.ts -- ts del componente(logica)
-        app.module.ts -- soporte al ts principal
-    Componentes Hijos
-        hijo.component.css -- css del componente(Apariencia)
-        hijo.component.html -- html del componente(Escritura)
-        hijo.component.ts -- ts del componente(logica)
-
+- SRC (CARPETA PRINCIPAL)
+    - index.html --
+    - style.css --
+    - main.ts --
+    - main.server.ts --
+        - APP (CARPETA PADRE COMPONENTES)
+            - app.component.css --
+            - app.component.html --
+            - app.component.spec.ts --
+            - app.component.ts --
+            - app.config.server.ts --
+            - app.config.ts --
+            - app.routes.ts --
+                - COMPONENTES
+                - 
+      
 # ESCRITURA
     {{ ValorPlano }} -- muestra texto plano
     (TipoEvento)="" -- llamamos al evento

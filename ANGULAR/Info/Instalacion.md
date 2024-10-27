@@ -20,6 +20,7 @@
   - Ejecutar 'ng new Nombre_Proyecto'
   - Confirmar
   - Ejecutar CSS
+  - Instalacion de funcionalidades tanto para server como local. Respuesta S
   - Se descarga una carpeta que trasladaremos al editor de texto
   - Instalar en Visual Studio
     - Angular Essentials (Version 16)

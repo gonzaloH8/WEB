@@ -60,11 +60,18 @@
     </div>
 
 ## NGFOR
-    <ul>
-      <li *ngFor="let item of listaItems">
-        {{ item }}
-      </li>
-    </ul>
+    <div>
+    @for (item of listArticle; track $index) {
+        <div class="card" style="width: 18rem;">
+            <img src={{item.image}} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{item.title}}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Detalles</a>
+            </div>
+          </div>
+    }
+    </div>
 
 ## NGSWITCH
     <div [ngSwitch]="opcion">

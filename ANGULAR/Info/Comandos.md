@@ -114,6 +114,7 @@
     { path: 'productos', component: ProductosComponent },
     { path: 'contacto', component: ContactoComponent },
     ];
+    <router-outlet/> <!-- SELECTOR DE RUTAS -->
 
 # MANEJO DE INFORMACION
     get: obtengo/pido la informacion. Misma URL que put y delete / id

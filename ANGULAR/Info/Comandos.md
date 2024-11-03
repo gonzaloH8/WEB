@@ -48,17 +48,20 @@
     - DIRECTIVES
     - PIPES
       
-# ESCRITURA
+# VARIABLES
     {{ ValorPlano }} -- muestra texto plano
     (TipoEvento)="" -- llamamos al evento
     [propiedades] -- muestra las propiedades de la etiqueta
+    producto?: number; inicializacion de una variable que puede o no tener valor
         
 # ESCTRUCTURAS DE CONTROL
 ## NGIF 
-    <div ngIf="mostrarElemento">
+    @if (){
+     <div >
       Contenido visisble si mostrarElemento es true
     </div>
-
+    }
+   
 ## NGFOR
     <div>
     @for (item of listArticle; track $index) {
@@ -105,38 +108,44 @@
     @Output() variable_hijo = new EventEmitter<string/void/number>(); -- permite enviar eventos desde el hijo al padre
     (variable_hijo)="evento()" -- imprimimos en el HTML padre los eventos del hijo
 
-# ENRUTAMIENTO
+# ENRUTAMIENTO/ PATH DE ARCHIVOS/CARPETAS
     const routes: Routes = [
     { path: 'inicio', component: InicioComponent },
     { path: 'productos', component: ProductosComponent },
     { path: 'contacto', component: ContactoComponent },
     ];
 
-# APP-MODUL
-    IMPORTACIONES
-    import { NgModule } from '@angular/core';
-    import { BrowserModule } from '@angular/platform-browser';
-    import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-    import { HomeComponent } from './home/home.component';
-    import { AppComponent } from './app.component';
-    @NGMODULE: ({
-        declarations: [ -- Inicializacion de componentes
-            AppComponent,
-            HomeComponent
-        ]
-        imports: [     -- Inicializacion de modulos
-            HttpClientModule,
-            BrowserModule,
-            AppRoutingModule,
-            FormsModule, --formularios de tipo plantilla
-            ReactiveFormsModule -- formularios de tipo reactive         
-        ]
-        boostrap: [AppComponent] -- boostrap funciones
-    })
-    export class AppModule{} -- clases
-
 # MANEJO DE INFORMACION
     get: obtengo/pido la informacion. Misma URL que put y delete / id
     put: para editar una informacion que ya este en la Base de Datos/servicio. Misma URL que get y delete / id
     delete: para eliminar un dato a traves de una id. Misma URL que get y put / id
     getAll/post: envio la informacion. Tienen la misma URL
+
+# CORE
+import {  } from '@angular/core';
+ONINIT
+- [DOCUMENTACION](https://v17.angular.io/api/core/OnInit)
+Un método de devolución de llamada que se invoca inmediatamente después de que el detector de cambios predeterminado haya verificado las propiedades enlazadas a datos de la directiva por primera vez, y antes de que se haya verificado cualquiera de los elementos secundarios de la vista o el contenido. Se invoca solo una vez cuando se crea una instancia de la directiva.
+    `class MyComponent implements OnInit {
+      ngOnInit() { // metodo de comportamiento de la clase al iniciar este componente
+        // ...
+      }
+    }`
+COMPONENT //
+
+# RxJS 
+import {  } from 'rxjs';
+    Observable -- A representation of any set of values over any amount of time. This is the most basic building block of RxJS.
+    const numbers$ = of(1, 2, 3); // observable simple que emite 3 valores
+    numbers$.subscribe(); // metodo del observable que permite emitir sus valores
+        - next: controlador para cada valor entregado. `next: value => console.log('Observable emitted the next value: ' + value)`
+        - error: controlador para una notificacion de error `error: err => console.error('Observable emitted an error: ' + err)`
+        - complete: controlador para la notificacion de finalizacion de la ejecucion `complete: () => console.log('Observable emitted the complete notification')`
+
+# ROUTER
+import {  } from '@angular/router';
+    params // captacion de paramentros de la URL
+    ActivatedRoute // 
+
+# COMMON/HTTP
+import { HttpClient } from '@angular/common/http'; // Cliente HTTP de Angular para hacer peticiones HTTP

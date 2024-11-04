@@ -56,6 +56,8 @@
         
 # ESCTRUCTURAS DE CONTROL
 ## NGIF 
+-[DOCUMENTACION](https://angular.dev/api/core/@if)
+
     @if (){
      <div >
       Contenido visisble si mostrarElemento es true
@@ -63,6 +65,8 @@
     }
    
 ## NGFOR
+-[DOCUMENTACION](https://angular.dev/api/core/@for)
+
     <div>
     @for (item of listArticle; track $index) {
         <div class="card" style="width: 18rem;">
@@ -77,32 +81,58 @@
     </div>
 
 ## NGSWITCH
-    <div [ngSwitch]="opcion">
-      <p *ngSwitchCase="'opcion1'">Contenido para opcion 1</p>
-      <p *ngSwitchCase="'opcion2'">Contenido para opcion 2</p>
-      <p *ngSwitchDefault>Contenido por defecto</p>
-    </div>
+-[DOCUMENTACION](https://angular.dev/api/core/@switch)
+
+    @switch (condition) {
+      @case (caseA) {
+        Case A.
+      }
+      @case (caseB) {
+        Case B.
+      }
+      @default {
+        Default case.
+      }
+    }
 
 ## NGCLASS
-    <div [ngClass]="{'clase1': condicion1, 'clase2': condicion2 }">
-      <!--Contenido con clases dinamicas-->
-    </div>
+-[DOCUMENTACION](https://v17.angular.io/api/common/NgClass)
+
+    <div [class]="['foo', 'bar']">Arrays</div>
+    <div [class]="{foo: true, bar: false}">Objetos</div>
+    <div [class]="my-class-1 my-class-2 my-class-3">clases</div>
   
 ## NGSTYLE
-    <div [ngStyle]="{'color': color, 'font-size': tamano}">
-     <!--Contenido con estilos dinamicos-->
-    </div>
+-[DOCUMENTACION](https://v17.angular.io/api/common/NgStyle)
+
+    <div [style]="navStyle"></div>
+    navStyle = 'font-size: 1.2rem; color: cornflowerblue;';
+    <a [style.text-decoration]="activeLinkStyle">Home Page</a>
+    activeLinkStyle = 'overline';
+    <a [style.text-decoration]="linkStyle">Login</a>
+    linkStyle = 'underline';
 
  ## NGCONTSINER
-     <ng-container *ngIf='xondicion'>
-       <!--Contenido que no afecta al DOM directamente-->
+ -[DOCUMENTACION](https://angular.dev/api/core/ng-container)
+ 
+     <ng-container *ngIf='condicion'>
+       <!-- Estructura mejor el contenido, mejora la fluidez y ejecuta las directivas en su interior sin ser interferidas por agentes externos-->
     </ng-container>
 
+# FORMULARIOS
+-[FORM-GROUP](https://v17.angular.io/api/forms/FormGroup)
+-[VALIDATORS](https://v17.angular.io/api/forms/Validators)
+-[FORM-BUILDER](https://v17.angular.io/api/forms/FormBuilder)
+-[FORMS-MODULE](https://v17.angular.io/api/forms/FormsModule)
+-[REACTIVE-FORMS-MODULE](https://v17.angular.io/api/forms/ReactiveFormsModule)
+    `import {  } from '@angular/forms';`
+
 # INPUT
+-[INPUT-OUTPUT](https://docs.angular.lat/guide/inputs-outputs)
     @input() datoEntrada: string; -- otorgas la funcionalidad a la variable para que tenga el valor del padre
     <app-hijo [datoEntrada]="ValorDesdePadre"></app-hijo> -- asignacion de la variable-hijo un valor de variable-padre
     ValorDesdePadre="HolaMundo"; -- variable del padre con un valor
-    <p>{{ datoEntrada }}</p> -- imprimes en web el valor
+    <p>{{ datoEntrada }}</p> -- imprimes en web el valor. Inicializacion de la variable desde el hijo, agregando valor del padre
 
 # OUTPUT
     @Output() variable_hijo = new EventEmitter<string/void/number>(); -- permite enviar eventos desde el hijo al padre

@@ -55,80 +55,74 @@
     producto?: number; inicializacion de una variable que puede o no tener valor
         
 # ESCTRUCTURAS DE CONTROL
-## NGIF 
--[DOCUMENTACION](https://angular.dev/api/core/@if)
+- [NGIF](https://angular.dev/api/core/@if)
 
-    @if (){
-     <div >
-      Contenido visisble si mostrarElemento es true
-    </div>
-    }
-   
-## NGFOR
--[DOCUMENTACION](https://angular.dev/api/core/@for)
+        @if (){
+         <div >
+          Contenido visisble si mostrarElemento es true
+        </div>
+        }
 
-    <div>
-    @for (item of listArticle; track $index) {
-        <div class="card" style="width: 18rem;">
-            <img src={{item.image}} class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{item.title}}</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Detalles</a>
-            </div>
-          </div>
-    }
-    </div>
+- [NGFOR](https://angular.dev/api/core/@for)
 
-## NGSWITCH
--[DOCUMENTACION](https://angular.dev/api/core/@switch)
+        <div>
+        @for (item of listArticle; track $index) {
+            <div class="card" style="width: 18rem;">
+                <img src={{item.image}} class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.title}}</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Detalles</a>
+                </div>
+              </div>
+        }
+        </div>
 
-    @switch (condition) {
-      @case (caseA) {
-        Case A.
-      }
-      @case (caseB) {
-        Case B.
-      }
-      @default {
-        Default case.
-      }
-    }
+- [NGSWITCH](https://angular.dev/api/core/@switch)
 
-## NGCLASS
--[DOCUMENTACION](https://v17.angular.io/api/common/NgClass)
+        @switch (condition) {
+          @case (caseA) {
+            Case A.
+          }
+          @case (caseB) {
+            Case B.
+          }
+          @default {
+            Default case.
+          }
+        }
 
-    <div [class]="['foo', 'bar']">Arrays</div>
-    <div [class]="{foo: true, bar: false}">Objetos</div>
-    <div [class]="my-class-1 my-class-2 my-class-3">clases</div>
+- [NGCLASS](https://v17.angular.io/api/common/NgClass)
+
+        <div [class]="['foo', 'bar']">Arrays</div>
+        <div [class]="{foo: true, bar: false}">Objetos</div>
+        <div [class]="my-class-1 my-class-2 my-class-3">clases</div>
   
-## NGSTYLE
--[DOCUMENTACION](https://v17.angular.io/api/common/NgStyle)
+- [NGSTYLE](https://v17.angular.io/api/common/NgStyle)
 
-    <div [style]="navStyle"></div>
-    navStyle = 'font-size: 1.2rem; color: cornflowerblue;';
-    <a [style.text-decoration]="activeLinkStyle">Home Page</a>
-    activeLinkStyle = 'overline';
-    <a [style.text-decoration]="linkStyle">Login</a>
-    linkStyle = 'underline';
+        <div [style]="navStyle"></div>
+        navStyle = 'font-size: 1.2rem; color: cornflowerblue;';
+        <a [style.text-decoration]="activeLinkStyle">Home Page</a>
+        activeLinkStyle = 'overline';
+        <a [style.text-decoration]="linkStyle">Login</a>
+        linkStyle = 'underline';
 
- ## NGCONTSINER
- -[DOCUMENTACION](https://angular.dev/api/core/ng-container)
- 
-     <ng-container *ngIf='condicion'>
-       <!-- Estructura mejor el contenido, mejora la fluidez y ejecuta las directivas en su interior sin ser interferidas por agentes externos-->
-    </ng-container>
+- [NGCONTSINER](https://angular.dev/api/core/ng-container)
+     
+         <ng-container *ngIf='condicion'>
+           <!-- Estructura mejor el contenido, mejora la fluidez y ejecuta las directivas en su interior sin ser interferidas por agentes externos-->
+        </ng-container>
 
 # FORMULARIOS
--[FORM-GROUP](https://v17.angular.io/api/forms/FormGroup)
--[VALIDATORS](https://v17.angular.io/api/forms/Validators)
--[FORM-BUILDER](https://v17.angular.io/api/forms/FormBuilder)
--[FORMS-MODULE](https://v17.angular.io/api/forms/FormsModule)
--[REACTIVE-FORMS-MODULE](https://v17.angular.io/api/forms/ReactiveFormsModule)
+- [FORM-GROUP](https://v17.angular.io/api/forms/FormGroup)
+- [VALIDATORS](https://v17.angular.io/api/forms/Validators)
+- [FORM-BUILDER](https://v17.angular.io/api/forms/FormBuilder)
+- [FORMS-MODULE](https://v17.angular.io/api/forms/FormsModule)
+- [REACTIVE-FORMS-MODULE](https://v17.angular.io/api/forms/ReactiveFormsModule)
     `import {  } from '@angular/forms';`
 
 # INPUT
--[INPUT-OUTPUT](https://docs.angular.lat/guide/inputs-outputs)
+- [INPUT-OUTPUT](https://docs.angular.lat/guide/inputs-outputs)
     @input() datoEntrada: string; -- otorgas la funcionalidad a la variable para que tenga el valor del padre
     <app-hijo [datoEntrada]="ValorDesdePadre"></app-hijo> -- asignacion de la variable-hijo un valor de variable-padre
     ValorDesdePadre="HolaMundo"; -- variable del padre con un valor

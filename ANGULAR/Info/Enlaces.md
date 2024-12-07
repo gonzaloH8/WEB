@@ -10,8 +10,6 @@
 # APIS
 - [TANSFORMACIÓN JSON-TYPESCRIPT](https://app.quicktype.io/)
 - [API PRODUCTOS](https://fakestoreapi.com/docs)
-  
-# METODOS
-- [SUSCRIBE](https://docs.angular.lat/guide/comparing-observables)
 
-
+# PROYECTOS WEB
+- [3 PRYECTOS](https://www.appbuilder.dev/es/blog/angular-app-examples)

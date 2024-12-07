@@ -298,3 +298,7 @@ Las apliaciones web modernas a menudo utilizan APIs para cargar datos de forma a
 ## MICROSERVICIOS
 En arquitecturas de microservicios, los diferentes componenetes del sistema se comunican a través de APIs, lo que permite la escalabilidad y flexibilidad en el desarrollo y mantenimiento de aplicaciones.
 
+# VOCABULARIO
+- Asincrona
+- Sincrona
+- Promesas

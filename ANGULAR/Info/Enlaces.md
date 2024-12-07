@@ -11,6 +11,7 @@
 - [TANSFORMACIÓN JSON-TYPESCRIPT](https://app.quicktype.io/)
 - [API PRODUCTOS](https://fakestoreapi.com/docs)
   
-  
+# METODOS
+- [SUSCRIBE](https://docs.angular.lat/guide/comparing-observables)
 
 

@@ -158,7 +158,8 @@ Un método de devolución de llamada que se invoca inmediatamente después de qu
     }`
 COMPONENT //
 
-# RxJS 
+# OBSERVABLE Y RxJS 
+- [SUSCRIBE](https://docs.angular.lat/guide/comparing-observables)
 import {  } from 'rxjs';
     Observable -- A representation of any set of values over any amount of time. This is the most basic building block of RxJS.
     const numbers$ = of(1, 2, 3); // observable simple que emite 3 valores

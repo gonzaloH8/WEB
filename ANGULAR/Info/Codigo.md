@@ -140,6 +140,13 @@
     ];
     <router-outlet/> <!-- SELECTOR DE RUTAS -->
 
+# PIPE
+    {{variable | uppercase }} -- convierte la variable en mayus
+    {{variable| titlecase }} -- convierte la primera letra en mayuscula
+    {{variable | jason }} -- imprime los valores del objeto
+    {{date | date: "dd/MM/yyyy" }} -- nos permite modificar el formato de fecha
+    {{number | double }} -- el nombre del pipe, aplica la operacion que queremos aplicar a la variable
+
 # MANEJO DE INFORMACION
     get: obtengo/pido la informacion. Misma URL que put y delete / id
     put: para editar una informacion que ya este en la Base de Datos/servicio. Misma URL que get y delete / id

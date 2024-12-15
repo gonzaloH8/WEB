@@ -145,7 +145,9 @@
     {{variable | uppercase }} -- convierte la variable en mayus
     {{variable| titlecase }} -- convierte la primera letra en mayuscula
     {{variable | jason }} -- imprime los valores del objeto
+    {{variable | CurrencyPipe }} -- Transforma un número en una cadena de moneda
     {{date | date: "dd/MM/yyyy" }} -- nos permite modificar el formato de fecha
+    {{variable | SlicePipe }} -- crea una nueva matriz o cadena que contiene un subconjunto de los elementos
     {{number | double }} -- el nombre del pipe, aplica la operacion que queremos aplicar a la variable
     
 

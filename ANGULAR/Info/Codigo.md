@@ -150,7 +150,6 @@
     {{variable | SlicePipe }} -- crea una nueva matriz o cadena que contiene un subconjunto de los elementos
     {{number | double }} -- el nombre del pipe, aplica la operacion que queremos aplicar a la variable
     
-
 # MANEJO DE INFORMACION
     get: obtengo/pido la informacion. Misma URL que put y delete / id
     put: para editar una informacion que ya este en la Base de Datos/servicio. Misma URL que get y delete / id

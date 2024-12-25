@@ -65,6 +65,18 @@
 
 - [NGFOR](https://angular.dev/api/core/@for)
 
+        <div class="row" >         
+                <div class="card t" *ngFor="let item of listProduct | search:searchValue"> <!-- CARTA -->
+                    <img src={{item.image}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{item.title}}</h5>
+                      <p class="card-text">{{item.price}}</p>
+                      <button (click)="addToCart(item)">AGREGAR</button> <!-- Boton agregador de prodcutos al carro -->
+                    </div>
+                  </div>
+              </div>
+          </div>
+
         <div>
         @for (item of listArticle; track $index) {
             <div class="card" style="width: 18rem;">
@@ -113,6 +125,10 @@
            <!-- Estructura mejor el contenido, mejora la fluidez y ejecuta las directivas en su interior sin ser interferidas por agentes externos-->
         </ng-container>
 
+- [NGMODEL](https://angular.dev/api/forms/NgModel)
+Se utiliza en los inputs, importando un formsModul. Funciona como un objeto que a nivel interno mantiene la persistencia del objeto y en el exterior mustra los datos de la API, adapando el comportamiento del modelo
+`[(ngModel)]=""`
+
 # FORMULARIOS
 - [FORM-GROUP](https://v17.angular.io/api/forms/FormGroup)
 - [VALIDATORS](https://v17.angular.io/api/forms/Validators)
@@ -141,6 +157,8 @@
     <router-outlet/> <!-- SELECTOR DE RUTAS -->
 
 # PIPE
+Es un operador especial, que permite transformar los datos de forma declarativa en la plantilla.
+
     ng g pipe -- creacion de ficheros pipe
     {{variable | uppercase }} -- convierte la variable en mayus
     {{variable| titlecase }} -- convierte la primera letra en mayuscula
